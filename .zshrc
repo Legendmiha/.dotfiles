@@ -1,5 +1,5 @@
-# export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
-export JAVA_HOME="/opt/jdk-17.0.6+10"
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+# export JAVA_HOME="/opt/jdk-17.0.6+10"
 
 # If you come from bash you might have to change your $PATH
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
@@ -74,7 +74,12 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+    git 
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-fzf-history-search
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,3 +124,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=/home/legendmiha/bin:$PATH
+[[ -e "/home/legendmiha/lib/oracle-cli/lib/python3.12/site-packages/oci_cli/bin/oci_autocomplete.sh" ]] && source "/home/legendmiha/lib/oracle-cli/lib/python3.12/site-packages/oci_cli/bin/oci_autocomplete.sh"
